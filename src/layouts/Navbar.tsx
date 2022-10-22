@@ -13,6 +13,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
+import Image from 'next/image';
 
 interface Props {
   /**
@@ -68,13 +69,15 @@ export default function DrawerAppBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
+          <Box sx={{mr:1}}> <Image src="/logo.png" alt="Lekan Logo" width={35} height={30} layout="fixed"  /> </Box>
+          
           <Typography
             variant="h6"
             component="div"
             color="primary"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: 'primary.main' }}
           >
-            MUI-LEkan_Dev
+             Lekan_Dev
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
