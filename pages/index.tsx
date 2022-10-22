@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import {Button, Typography} from "@mui/material";
+// import Link from 'next/link'
+import {Button, Typography, Grid, Link} from "@mui/material";
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -15,13 +16,18 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Button variant="outlined" color="primary"> Coming Soon...</Button>
+        <Grid container direction="row" justifyContent="center" columnSpacing={2}>
+          <Grid item  > <Button variant="outlined" color="primary"> Coming Soon...</Button> </Grid>
+          <Grid item  > <Button component={Link} href="https://blog.lekan.dev" variant="outlined"  target="_blank" color="secondary"> Visit Blog</Button> </Grid>
+        </Grid>
+        
+        
 
        
       </main>
 
       <footer className={styles.footer}>
- <Typography></Typography>
+ <Typography>Alaf Dev  © {" "}{new Date().getFullYear()}</Typography>
       </footer>
     </div>
   )
